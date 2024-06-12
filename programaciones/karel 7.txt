@@ -1,0 +1,41 @@
+class program{
+   void derecha(n)
+   {
+       iterate(n)
+       {
+          turnleft();
+       }  
+   }       
+   program () {
+       if(facingSouth)
+       {  
+    	  derecha(2);
+       }  
+       if(facingEast)
+       {   
+    	  derecha(1);
+       }  
+       if(facingWest)
+       {  
+    	  derecha(3);
+       }  
+       iterate(4)
+       {  
+          derecha(2);
+       	  iterate(8)
+          {
+              if(frontIsClear)
+              {
+                  move();
+              }
+       	      if(notNextToABeeper)
+              {
+       	    	  putbeeper();
+              }
+           
+          }
+          derecha(3);
+       }
+       turnoff();
+   }
+}

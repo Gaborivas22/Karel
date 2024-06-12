@@ -1,0 +1,36 @@
+class program{
+ program () {
+      iterate(10)
+      {
+          if(frontIsBlocked)
+          {
+          	turnleft();
+          	move(); 
+          	iterate(3)
+          	{
+          	    turnleft();
+          	}
+          	move();
+          	iterate(3)
+          	{
+          	    turnleft();
+          	}
+          	move();
+          	turnleft();
+           }
+           else
+           {
+                move();
+           }
+       }
+       if(notNextToABeeper)
+       {
+           putbeeper();
+       }
+       else
+       {
+            pickbeeper();
+       }
+       turnoff();
+    }
+}

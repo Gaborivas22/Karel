@@ -1,0 +1,35 @@
+class program {
+    program () {
+        // TODO poner codigo aqui
+        iterate(10)
+        {
+        	if(leftIsClear && rightIsClear)
+        	{
+        		putbeeper();
+        	}
+        	if(leftIsBlocked && rightIsBlocked)
+        	{
+        		iterate(4)
+            		{
+            			putbeeper();
+            		}
+        	}
+       		if(leftIsBlocked && rightIsClear)
+        	{
+        		iterate(2)
+            		{
+            			putbeeper();
+            		}
+        	}
+        	if(rightIsBlocked && leftIsClear)
+        	{
+        		iterate(3)
+            		{
+            			putbeeper();
+            		}
+        	}
+        	move();
+        }
+        turnoff();
+    }
+}

@@ -1,0 +1,21 @@
+class program{
+ program () {
+       iterate(3)
+       {
+           if(frontIsBlocked)
+           {
+               turnleft();
+           }
+        }
+        if(frontIsBlocked)
+        {
+            turnleft();
+        }
+        else
+        {
+            move();
+        }
+       turnoff();
+     }
+}
+

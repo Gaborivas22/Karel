@@ -1,0 +1,78 @@
+class program {
+    void gira(n)
+    {
+        iterate(n)
+        {
+            turnleft();
+        }
+    }
+    void walk(n)
+    {
+        while(frontIsClear)
+        {
+            move();
+        }
+    }
+    void vuelta(n)
+    {
+        iterate(n)
+        {
+            turnleft();
+        }
+        move();
+        iterate(n)
+        {
+            turnleft();
+        }
+    }
+    void comienzo(n)
+    {
+        if(facingEast)
+        {
+            gira(1);
+        }
+        else
+        {
+            if(facingSouth)
+            {
+                gira(2);
+            }
+            else
+            {
+                if(facingWest)
+                {
+                    gira(3);
+                }
+            }  
+        }
+    }
+    program () {
+        comienzo(1);
+        walk(1);
+        if(leftIsClear)
+        {
+            gira(1);
+            walk(1);
+            gira(3);
+        }
+        gira(3);
+        while(frontIsClear&&facingEast&&rightIsClear||frontIsClear&&facingWest&&leftIsClear)
+        {
+            move();
+            if(frontIsBlocked&&facingEast&&rightIsClear)
+            {
+                vuelta(3);
+            }
+            if(frontIsBlocked&&facingWest&&leftIsClear)
+            {
+                vuelta(1);
+            }
+        }
+        if(facingWest&&leftIsBlocked||facingEast&&rightIsBlocked)
+        {
+            putbeeper();
+            comienzo(1);
+        }
+        turnoff();
+    }
+}

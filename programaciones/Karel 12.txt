@@ -1,0 +1,38 @@
+class program {
+  void derecha(n)
+  {
+     iterate(n)
+     {
+        turnleft();
+     }  
+   }    
+   program () {
+ 	while(frontIsClear)
+    	{
+        	while(nextToABeeper)
+        	{
+        	    if(nextToABeeper)
+        	    {
+        	        pickbeeper();
+        	        if(nextToABeeper)
+        	        {
+        	            putbeeper();
+        	            derecha(3);
+        	            move();
+        	        }   
+        	        else
+        	        {   
+               	            if(notNextToABeeper)
+                            {
+                      		putbeeper();
+                      		turnleft();
+                      	        move();
+                     	    }
+                	}
+              	    }   
+           	}
+        move();
+        }     
+    turnoff();
+    }
+}

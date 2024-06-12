@@ -1,0 +1,43 @@
+class program {
+    program () {
+        
+        iterate(9)
+        {
+           move();
+           putbeeper();
+        }
+        iterate(3)
+        {
+          turnleft();
+        }
+        iterate(9)
+        {
+           move();
+           putbeeper();
+        }
+        iterate(3)
+        {
+          turnleft();
+        }
+        iterate(9)
+        {
+           move();
+           putbeeper();
+        }
+        iterate(3)
+        {
+          turnleft();
+        }
+        iterate(9)
+        {
+           move();
+           putbeeper();
+        }
+        iterate(3)
+        {
+          turnleft();
+        }
+       
+        turnoff();
+    }
+} 

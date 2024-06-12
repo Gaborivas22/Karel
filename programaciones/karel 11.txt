@@ -1,0 +1,51 @@
+class program {
+    program () {
+        iterate(8)
+        {
+        	if(leftIsBlocked && rightIsClear && notNextToABeeper)
+        	{
+            		iterate(3)
+            		{
+            			turnleft();
+                	}
+            		move();
+            		turnleft();
+            		turnleft();
+            		move();
+            		iterate(3)
+            		{
+            			turnleft();
+                	}
+        	}
+        	if(rightIsBlocked && leftIsClear && notNextToABeeper)
+        	{
+            		turnleft();
+            		move();
+            		iterate(2)
+            		{
+            			turnleft();
+                	}
+            		move();
+            		turnleft();
+            	}
+         	if(rightIsClear && leftIsClear && nextToABeeper)
+         	{
+         		pickbeeper();
+         		iterate(4)
+            		{
+            			turnleft();
+               		}
+         		putbeeper();
+         	}
+        	if(rightIsClear && leftIsClear && notNextToABeeper || leftIsBlocked && rightIsBlocked && notNextToABeeper)
+           	{
+           		iterate(4)
+            		{
+            			turnleft();
+                	}
+           	}
+        	move();
+        	}    
+        turnoff();
+    }
+}

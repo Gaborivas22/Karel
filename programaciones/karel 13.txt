@@ -1,0 +1,37 @@
+class program {
+    void derecha(n)
+    {
+        iterate(n)
+        {
+            turnleft();
+        }
+    }
+    void trompo(n)
+    {
+        iterate(n)
+        {
+            turnleft();
+        }
+    }
+    program() {
+        while(rightIsBlocked)
+        {
+            move();
+        }
+        if(rightIsClear)
+        {
+            iterate(2)
+            {
+                derecha(3);
+        	move();
+            }
+        }
+        while(rightIsBlocked && frontIsClear)
+        {
+    	    trompo(4);
+            move();
+        }
+        derecha(2);
+        turnoff();
+    }
+}
